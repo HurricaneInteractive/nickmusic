@@ -1,0 +1,85 @@
+.social-media {
+    margin-top: 60px;
+    @media (min-width: $ipad-portrait) {
+        position: absolute;
+        right: 30px;
+        margin-top: 0;
+    }
+    .title {
+        @media (min-width: $ipad-portrait) {
+            transform: rotate(-90deg);
+            position: absolute;
+            bottom: calc(100% + 130px);
+            right: -2px;
+        }
+    }
+    h3 {
+        font-weight: normal;
+        font-size: $base-font-size;
+        text-transform: uppercase;
+        margin: 0 0 25px;
+        position: relative;
+        display: inline-block;
+        @media (min-width: $ipad-portrait) {
+            margin: 0;
+        }
+        &:before {
+            content: '';
+            display: block;
+            width: 125px;
+            height: 3px;
+            position: absolute;
+            right: calc(100% + 10px);
+            top: 50%;
+            transform: translateY(-50%);
+            background: $white;
+            @media (min-width: $ipad-portrait) {
+                width: 90px;
+                right: calc(100% + 5px);
+            }
+        }
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        text-align: center;
+        @media (min-width: $ipad-portrait) {
+            text-align: unset;
+        }
+        &:after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+        li {
+            padding: 0;
+            margin: 0;
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: 25px;
+            }
+            @media (min-width: $ipad-portrait) {
+                display: initial;
+                &:not(:last-child) {
+                    margin-bottom: 25px;
+                    margin-right: 0;
+                }
+            }
+            a {
+                display: block;
+                width: 52px;
+                height: 52px;
+                border: 3px solid $neon-green;
+                transition: border-color 250ms ease-in-out;
+                @media (min-width: $ipad-portrait) {
+                    border-color: transparent;
+                }
+                &:hover {
+                    border-color: $neon-green;
+                }
+            }
+        }
+    }
+}
