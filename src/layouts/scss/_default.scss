@@ -1,0 +1,27 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: $primary-font;
+    color: $white;
+    font-size: $base-font-size;
+    font-weight: normal;
+    -webkit-font-smoothing: auto;
+    font-smooth: auto;
+    background: $neon-purple;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+::selection {
+    background: $neon-green;
+    color: $black;
+}
+
+a {
+    color: $white;
+    text-decoration: none;
+}
