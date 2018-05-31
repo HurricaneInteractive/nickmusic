@@ -16,16 +16,20 @@
     .display-text {
         position: absolute;
         left: 0;
-        top: 50%;
+        top: 80%;
         font-family: $secondary-font;
         max-width: 1350px;
-        font-size: 500px;
+        font-size: 250px;
         line-height: 0.9;
         z-index: 1;
         opacity: 0.1;
         transform: rotate(330deg) translateY(-50%);
         user-select: none;
         margin: 0;
+        @media (min-width: $ipad-landscape) {
+            font-size: 500px;
+            top: 50%;
+        }
     }
     h1 {
         font-size: 24px;
