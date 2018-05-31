@@ -12,7 +12,7 @@ export default class IndexPage extends React.Component {
     render() {
         return (
             <section className="homepage" style={{
-                'background': `url(${ bgOptions[Math.floor(Math.random() * bgOptions.length)] }) no-repeat center center / cover`
+                'background': `url(${ bgOption3 }) no-repeat center center / cover`
             }}>
                 <p className="display-text">iCM</p>
                 <h1>FANTASIES AT FIVE<span>am</span><br/>Coming Soon</h1>
