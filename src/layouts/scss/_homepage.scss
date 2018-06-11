@@ -5,13 +5,14 @@
     width: 100%;
     height: 100%;
     z-index: 5;
-    padding: 60px 30px 30px;
+    padding: 80px 30px 80px;
     text-align: center;
     @media (min-width: $ipad-portrait) {
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: unset;
+        flex-direction: column;
     }
     .display-text {
         position: absolute;
@@ -31,7 +32,20 @@
             top: 50%;
         }
     }
-    h1 {
+    .album-logo {
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0.1;
+        max-width: 600px;
+        width: 100%;
+        @media (min-width: $ipad-portrait) {
+            opacity: 0.2;
+        }
+    }
+    h2 {
         font-size: 24px;
         margin: 0;
         font-weight: bold;
@@ -53,22 +67,46 @@
         }
         &:after {
             content: '';
-            width: 95%;
-            height: 70%;
             position: absolute;
+            bottom: -5px;
+            left: -2px;
+            width: calc(100% + 4px);
+            height: 2px;
+            background: $neon-green;
             display: block;
-            border: 6px solid $neon-green;
-            background: transparent;
             z-index: -1;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) skew(-20deg);
-            opacity: 0.8;
-            @media (min-width: $ipad-landscape) {
-                opacity: 1;
-                border: 10px solid $neon-green;
-                height: 80%;
+            transition: height 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        &:hover {
+            opacity: 1;
+            color: $black;
+            &:after {
+                height: calc(100% + 5px);
             }
         }
+        // &:after {
+        //     content: '';
+        //     width: 95%;
+        //     height: 70%;
+        //     position: absolute;
+        //     display: block;
+        //     border: 6px solid $neon-green;
+        //     background: transparent;
+        //     z-index: -1;
+        //     top: 50%;
+        //     left: 50%;
+        //     transform: translate(-50%, -50%) skew(-20deg);
+        //     opacity: 0.8;
+        //     @media (min-width: $ipad-landscape) {
+        //         opacity: 1;
+        //         border: 10px solid $neon-green;
+        //         height: 80%;
+        //     }
+        // }
+    }
+    > h3 {
+        display: block;
+        font-weight: 300;
+        margin: 10px 0 0;
     }
 }

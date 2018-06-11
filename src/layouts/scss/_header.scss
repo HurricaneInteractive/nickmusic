@@ -1,0 +1,29 @@
+header {
+    position: absolute;
+    z-index: 6;
+    top: 15px;
+    left: 15px;
+    @media (min-width: $ipad-landscape) {
+        top: 30px;
+        left: 30px;
+    }
+    h1 {
+        margin: 0;
+        span {
+            position: absolute;
+            top: -9999px;
+            text-indent: -9999px;
+            font-size: 1px;
+            height: 1px;
+            visibility: hidden;
+        }
+        img {
+            max-width: 100px;
+            width: 100%;
+            display: block;
+            @media (min-width: $ipad-portrait) {
+                max-width: 150px;
+            }
+        }
+    }
+}

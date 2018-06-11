@@ -10,6 +10,21 @@ footer {
         text-align: right;
         padding: 0 30px 30px;
     }
+    audio {
+        display: none;
+        @media (min-width: $mobile) {
+            display: block;
+            margin: 0 auto 20px;
+        }
+        @media (max-width: $mobile - 1) {
+            width: 100%;
+        }
+        @media (min-width: $ipad-portrait) {
+            float: left;
+            margin: unset;
+            display: initial;
+        }
+    }
     a {
         opacity: 1;
         transition: opacity 200ms cubic-bezier(0.215, 0.61, 0.355, 1), color 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
